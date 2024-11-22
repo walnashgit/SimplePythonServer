@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animal Selector and File Uploader</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="animal-selector">
+            <h2>Select Animals</h2>
+            <label><input type="checkbox" id="cat" name="animal" value="cat"> Cat</label>
+            <label><input type="checkbox" id="dog" name="animal" value="dog"> Dog</label>
+            <label><input type="checkbox" id="elephant" name="animal" value="elephant"> Elephant</label>
+        </div>
+        <div class="image-display">
+            <h2>Selected Animals</h2>
+            <div id="selected-images"></div>
+        </div>
+        <div class="file-uploader">
+            <h2>Upload File</h2>
+            <input type="file" id="file-input">
+            <div id="file-info"></div>
+            <div id="spinner" class="spinner hidden"></div>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
